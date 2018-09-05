@@ -1,0 +1,9 @@
+stages:
+  - develop
+
+deploy:
+  type: develop
+  script:
+    - echo 'hello'
+  only:
+    - master
