@@ -11,7 +11,7 @@ deploy:
     - eval "$(ssh-agent -s)"
     - ssh-add ~/.ssh/id_rsa
     - ssh-keyscan -H 'kakumei.jp' >> ~/.ssh/known_hosts
-    - ssh fuji@kakume.jp "cd $DEPLOY_PATH && git pull"
+    - ssh fuji@kakumei.jp "cd $DEPLOY_PATH && git pull"
   script:
     - python -V
   only:
