@@ -11,8 +11,8 @@ deploy:
     - eval "$(ssh-agent -s)"
     - ssh-add ~/.ssh/id_rsa
     - ssh-keyscan -H 'kakumei.jp' >> ~/.ssh/known_hosts
-    - hostname
+    - ssh web "cd $DEPLOY_PATH && git pull"
   script:
-    - php -v
+    - python -V
   only:
     - master
